@@ -1,0 +1,115 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 90%;
+}
+
+.header {
+    text-align: center;
+    padding: 1rem .5rem;
+    color: WHITE;
+}
+
+@media(min-width: 544px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1rem;
+        align-items: center;
+    }
+}
+
+.info h1 {
+    color: green;
+}
+
+.info p,
+.footer p {
+    font-size: 20px;
+    color: BLACK;
+}
+
+.header h1 {
+    margin-top: 0;
+}
+
+.fondo {
+    background-color: rgb(255, 248, 230);
+}
+
+main h2 {
+    text-align: center;
+}
+
+.imagenes {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.imagenes img {
+    padding: .5rem 0;
+}
+
+.footer {
+    text-align: center;
+    color: WHITE;
+    padding: 1rem;
+}
+
+.footer i {
+    font-size: 2rem;
+}
+
+.face {
+    color: blue;
+    padding-right: .5rem;
+}
+
+.insta {
+    color: #fd5949;
+    padding-left: .5rem;
+}
+
+.modal-container {
+    display: inline-block;
+    position: relative;
+}
+
+.modal-container .active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container img {
+    z-index: 1;
+}
+
+.modal-container .active::after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 0;
+}
