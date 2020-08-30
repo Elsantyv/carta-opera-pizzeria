@@ -221,7 +221,7 @@ Modal
 
 .modal-container {
     display: inline-block;
-    position: relative;
+    position: flex;
 }
 
 .modal-container.active {
@@ -233,7 +233,7 @@ Modal
     justify-content: baseline;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .modal-container img {
