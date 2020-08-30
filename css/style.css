@@ -10,6 +10,32 @@ html {
     box-sizing: inherit;
 }
 
+
+/*==================================
+Variables
+===================================*/
+
+:root {
+    --fuentePrimaria: 'Balsamiq Sans', cursive;
+    --fuenteSegundaria: 'Noto Sans HK', sans-serif;
+    --fuenteT: 'Shadows Into Light', cursive;
+}
+
+
+/*==================================
+Globales
+===================================*/
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuentePrimaria);
+}
+
+p {
+    font-family: var(--fuenteSegundaria);
+}
+
 .contenedor {
     max-width: 900px;
     margin: 0 auto;
@@ -18,6 +44,11 @@ html {
 img {
     max-width: 90%;
 }
+
+
+/*==================================
+Header
+===================================*/
 
 .header {
     text-align: center;
@@ -41,7 +72,7 @@ img {
 .info p,
 .footer p {
     font-size: 20px;
-    color: BLACK;
+    color: rgb(75, 61, 61);
 }
 
 .header h1 {
@@ -52,8 +83,60 @@ img {
     background-color: rgb(255, 248, 230);
 }
 
+
+/*==================================
+Main
+===================================*/
+
 main h2 {
     text-align: center;
+    font-size: 1.8rem;
+    color: GREEN;
+}
+
+.promocion {
+    margin: 0 auto;
+    border: 3px solid rgb(75, 61, 61);
+    background: rgb(255, 248, 230);
+    border-radius: 10px;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 .5rem;
+    color: rgb(75, 61, 61);
+}
+
+.descuento {
+    font-size: 2rem;
+    color: GREEN;
+}
+
+.descuento p strong {
+    font-size: 4rem;
+    margin: 0 10px;
+}
+
+@media(min-width: 768px) {
+    .promocion {
+        flex-direction: row;
+        padding: 1rem 2rem;
+        justify-content: center;
+        height: 200px;
+    }
+    .infoPromo,
+    .descuento {
+        padding: 0 2rem;
+    }
+    .descuento {
+        font-size: 2rem;
+        color: GREEN;
+    }
+    .descuento p strong {
+        font-size: 4rem;
+        margin: 0 10px;
+    }
 }
 
 .imagenes {
@@ -65,10 +148,56 @@ main h2 {
     padding: .5rem 0;
 }
 
+
+/*==================================
+Footer
+===================================*/
+
+footer p,
+.copy {
+    text-align: center;
+    color: rgb(75, 61, 61);
+    font-size: var(--fuenteSegundaria);
+    font-size: 20px;
+}
+
+footer p {
+    padding-top: 2rem;
+}
+
+.copy {
+    padding: 0 0 2rem 0;
+}
+
+h3 {
+    color: rgb(75, 61, 61);
+}
+
 .footer {
     text-align: center;
     color: WHITE;
     padding: 1rem;
+}
+
+.frase strong {
+    font-size: 2rem;
+}
+
+.frase p .autor {
+    font-family: var(--fuenteT);
+}
+
+@media(min-width: 544px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .frase {
+        width: 300px;
+    }
 }
 
 .footer i {
@@ -85,31 +214,40 @@ main h2 {
     padding-left: .5rem;
 }
 
+
+/*==================================
+Modal
+===================================*/
+
 .modal-container {
     display: inline-block;
     position: relative;
 }
 
-.modal-container .active {
+.modal-container.active {
     position: fixed;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .modal-container img {
     z-index: 1;
+    margin: 0 auto;
 }
 
-.modal-container .active::after {
-    content: "";
+.modal-container.active::after {
+    content: '';
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.60);
+    background-color: rgba(0, 0, 0, 0.80);
     z-index: 0;
 }
