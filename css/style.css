@@ -187,16 +187,34 @@ h3 {
     font-family: var(--fuenteT);
 }
 
+.click {
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.click p {
+    padding: 0;
+    margin: 0;
+}
+
 @media(min-width: 544px) {
     .footer {
         display: flex;
         flex-direction: row;
         padding: 1rem 1rem;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
     .frase {
         width: 300px;
+    }
+    .horario {
+        padding-right: 8rem;
+    }
+    .info {
+        padding-left: 8rem;
     }
 }
 
