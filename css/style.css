@@ -32,6 +32,12 @@ h3 {
     font-family: var(--fuentePrimaria);
 }
 
+h2{
+
+    color: green;
+
+}
+
 p {
     font-family: var(--fuenteSegundaria);
 }
