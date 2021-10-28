@@ -83,6 +83,12 @@ Header
     background-color: rgb(255, 248, 230);
 }
 
+.complemento{
+
+    display: flex;
+    flex-direction: column;
+
+}
 
 /*==================================
 Main
