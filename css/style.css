@@ -99,7 +99,7 @@ Header
 .complemento div img{
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
 }
 
